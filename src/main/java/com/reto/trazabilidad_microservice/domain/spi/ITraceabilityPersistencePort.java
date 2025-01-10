@@ -16,4 +16,5 @@ public interface ITraceabilityPersistencePort {
 
     Page <Traceability> getTraceabilityByUser(Long clientDocument, String lastStatus, String newStatus, int page, int size);
 
+    
 }

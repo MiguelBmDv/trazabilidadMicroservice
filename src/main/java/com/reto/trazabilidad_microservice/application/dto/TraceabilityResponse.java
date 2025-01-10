@@ -2,11 +2,14 @@ package com.reto.trazabilidad_microservice.application.dto;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import lombok.Getter;
 import lombok.Setter;
 
 @Setter
 @Getter
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class TraceabilityResponse {
 
     private Long id;

@@ -24,6 +24,7 @@ public class SecurityConfig {
         http.csrf(csrf -> csrf.disable()) 
             .authorizeHttpRequests(authz -> authz
                 .requestMatchers("/traceability/my-orders").hasAnyAuthority("USER")
+                .requestMatchers("/owner/**").hasAnyAuthority("OWNER")
                 .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/swagger-ui.html").permitAll()
                 .anyRequest().authenticated() 
             )
